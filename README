@@ -1,0 +1,20 @@
+Requirements:
+============
+
+
+To display a map and plot points on the map, tapping/clicking on point will display a list of events
+Use Node.js and MongDB to feed the data
+An admin side will be able to add /edit/ delete markers
+Cache the data into localStorage rather than on the fly after selecting each marker
+Map will centre on the devices location. 
+
+
+
+Routes:
+=======
+
+/
+goes to index.html
+
+/markers
+ lists markers in json format

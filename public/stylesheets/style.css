@@ -1,0 +1,58 @@
+.x-tabbar {
+    padding-top: 10px !important;
+    border-bottom: 2px solid #306aa1 !important;
+}
+
+/*colors based on #0184bc tetrad */
+
+.poilist .title {
+color:#FF8700;
+font-weight: normal;
+}
+
+.poilist .time {
+color:black;
+font-weight: normal;
+}
+.poilist.true_venue{
+color: black;
+font-weight: normal;
+}
+.poiImage {
+margin: 0;
+}
+
+.poiTitle {
+margin:0;
+padding:5px;
+background-color:#FF8700;
+color: white;
+font-weight: normal;
+}
+
+.poiTitle .poiDateTime {
+font-size:0.75em;
+}
+
+.poiDescription {
+margin:5px;
+font-size:0.75em;
+}
+
+#poiInfo {
+margin: 5px;
+}
+
+#poiInfo ul li {
+margin: 5px;
+}
+
+#poiInfo .answer {
+font-size:0.75em;
+}
+/*
+.x-mask, .x-mask.x-mask-gray
+{
+    background-color: red;
+}
+*/

@@ -1,12 +1,11 @@
-Ext.regApplication({
+Ext.application({
     name: 'app',
+    views: ['Viewport'],
     launch: function() {
-        this.launched = true;
-        this.mainLaunch();
-    },
-    mainLaunch: function() {
-        this.views.viewport = new this.views.Viewport();
-	console.log('launched');
+        Ext.create('Ext.Panel', {
+            fullscreen: true,
+            html: 'Hello World'
+        });
     }
 });
 

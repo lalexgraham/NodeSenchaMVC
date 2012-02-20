@@ -30,7 +30,7 @@ app.configure('production', function(){
 // Routes
 
 app.get('/', function (req, res) {
-    res.redirect('/index.html');
+   res.redirect('/index.html');
 });
 
 var mongoose = require('mongoose');
@@ -61,5 +61,5 @@ app.get('/markers', function (req, res) {
 });
 
 
-app.listen(3000);
+app.listen(5000);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

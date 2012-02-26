@@ -1,23 +1,32 @@
-Ext.define('app.view.Viewport', {
-    extend: 'Ext.Panel',
-    fullscreen: true,
-    layout: 'card',
-    cardSwitchAnimation: 'slide',
-    initComponent: function() {
-        //put instances of cards into app.views namespace
-        Ext.apply(app.views, {
-	//map: new app.views.Map()
-          //  markersList: new app.views.MarkersList()
-		 
-        });
-        //put instances of cards into viewport
-        Ext.apply(this, {
-            items: [
-	      //	app.views.map
-              // app.views.markersList
+Ext.define('Myapp.view.Viewport', {
+    extend: 'Ext.tab.Panel',
+        
+    config: {
+        fullscreen: true,
+        
+        tabBar: {
+            docked: 'bottom',
+            layout: {
+                pack: 'center'
+            }
+        },
 
-            ]
-        });
-        app.views.Viewport.superclass.initComponent.apply(this, arguments);
+        defaults: {
+            scrollable: true
+        },
+
+        items: [
+            {
+                title: 'home',
+                iconCls: 'home',
+                xtype : 'welcomescreen'                 
+            },
+
+            {
+                title: 'Map',
+                iconCls: 'map',
+                xtype: 'myMap'
+            }
+        ]
     }
 });

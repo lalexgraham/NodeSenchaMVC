@@ -1,11 +1,17 @@
-Ext.application({
-    name: 'app',
-    views: ['Viewport'],
-    launch: function() {
-        Ext.create('Ext.Panel', {
-            fullscreen: true,
-            html: 'Hello World'
-        });
-    }
+Ext.Loader.setConfig({
+    enabled: true
 });
 
+Ext.application({
+    name: 'Myapp',
+    
+    views: [
+        'Viewport',
+        'Welcomescreen',
+        'MyMap'
+    ],
+
+    launch: function(){
+        Ext.create('Myapp.view.Viewport');
+    }    
+});

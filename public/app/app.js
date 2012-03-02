@@ -8,8 +8,11 @@ Ext.application({
     views: [
         'Viewport',
         'Welcomescreen',
-        'MyMap'
+        'Map'
     ],
+controllers: [
+'Map'
+],
 
     launch: function(){
         Ext.create('Myapp.view.Viewport');

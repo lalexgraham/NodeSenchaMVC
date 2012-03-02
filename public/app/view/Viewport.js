@@ -25,7 +25,7 @@ Ext.define('Myapp.view.Viewport', {
             {
                 title: 'Map',
                 iconCls: 'map',
-                xtype: 'myMap'
+                xtype: 'MVCmap'
             }
         ]
     }

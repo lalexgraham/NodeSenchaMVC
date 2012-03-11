@@ -1,6 +1,6 @@
-Ext.define('Myapp.view.Welcomescreen', {
+Ext.define('Myapp.view.WelcomeScreen', {
     extend: 'Ext.Container',
-    xtype: 'welcomescreen',
+    xtype: 'welcomeScreen',
         
     config: {
         defaults: {
@@ -10,7 +10,7 @@ Ext.define('Myapp.view.Welcomescreen', {
         items: [
             {
                 xtype: 'panel',
-                html: '<h2>MVC Demo with two Views, displaying a normal panel and a map through a Viewport</h2>'
+                html: '<h2>MVC Demo with three Views, displaying a normal panel, then a map and a list dsiplaying the same data through a Viewport</h2>'
             }
         ]
     }

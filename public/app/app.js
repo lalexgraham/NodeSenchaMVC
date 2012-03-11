@@ -3,18 +3,23 @@ Ext.Loader.setConfig({
 });
 
 Ext.application({
-    name: 'Myapp',
-    
-    views: [
-        'Viewport',
-        'Welcomescreen',
-        'Map'
-    ],
-controllers: [
-'Map'
-],
-
-    launch: function(){
-        Ext.create('Myapp.view.Viewport');
-    }    
+	name: 'Myapp',
+	views: [
+        	'Viewport',
+        	'WelcomeScreen',
+        	'Map',
+		'MarkerList'
+	],
+	controllers: [
+		'Marker'
+	],
+	models:[
+		'Marker'
+	],
+	stores:[
+		'Marker'
+	],
+	launch: function(){
+       	 Ext.create('Myapp.view.Viewport');
+    	}    
 });

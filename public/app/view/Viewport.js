@@ -19,13 +19,17 @@ Ext.define('Myapp.view.Viewport', {
             {
                 title: 'home',
                 iconCls: 'home',
-                xtype : 'welcomescreen'                 
+                xtype : 'welcomeScreen'                 
             },
-
             {
-                title: 'Map',
-                iconCls: 'map',
+                title: 'map',
+                iconCls: 'maps',
                 xtype: 'MVCmap'
+            },
+            {
+                title: 'marker list',
+                iconCls: 'action',
+                xtype: 'markerList'
             }
         ]
     }

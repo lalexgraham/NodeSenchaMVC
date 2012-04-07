@@ -35,7 +35,7 @@ app.get('/', function (req, res) {
 
 var mongoose = require('mongoose');
 
-db = mongoose.connect('mongodb://127.0.0.1/PoiPoi');
+mongoose.connect('mongodb://127.0.0.1/PoiPoi');
 
 //create the marker Model using the 'marker' collection as a data-source
 markerModel = mongoose.model('marker', new mongoose.Schema({
@@ -44,6 +44,14 @@ markerModel = mongoose.model('marker', new mongoose.Schema({
     long: String,
     lat: String,
     icon: String,
+    description: String
+}));
+
+
+poiModel = mongoose.model('poi', new mongoose.Schema({
+    MarkerID: Number,
+    title: String,
+    image: String,
     description: String
 }));
 
@@ -58,6 +66,21 @@ app.get('/markers', function (req, res) {
         });
     });
 
+});
+
+//example url 
+//http://localhost:5000/pois/1234
+
+app.get('/pois/:markerid', function(req, res) {
+console.log('markerid param : ' + req.params.markerid);
+ poiModel.find({MarkerID: +req.params.markerid}, function (err,pois) {
+		res.contentType('json');
+		res.json({
+		    success: true,
+		  data: pois
+
+		});
+ });
 });
 
 

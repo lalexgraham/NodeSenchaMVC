@@ -1,25 +1,20 @@
-Ext.Loader.setConfig({
-    enabled: true
-});
-
 Ext.application({
-	name: 'Myapp',
-	views: [
-        	'Viewport',
-        	'WelcomeScreen',
-        	'Map',
-		'MarkerList'
-	],
-	controllers: [
-		'Marker'
-	],
-	models:[
-		'Marker'
-	],
-	stores:[
-		'Marker'
-	],
+	name: 'Poi',
+
+	views: ['Main'],
+	controllers:['Main'],
+	stores:['Pois', 'Markers'],
+	models:['Poi','Marker'],
+
+	selectedMarker: [],
+	setSelectedMarker: function(id,title) {
+		this.selectedMarker['id'] = id;
+		this.selectedMarker['title'] = title;
+    	},
+
 	launch: function(){
-       	 Ext.create('Myapp.view.Viewport');
-    	}    
+		Ext.Viewport.add({
+			xclass: 'Poi.view.Main'
+		});
+	}  
 });

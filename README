@@ -1,8 +1,7 @@
 Requirements:
 ============
 
-Back to basics app using Sencha Touch 2 MVC to display a viewport containing two panels/components
-
+A  Sencha Touch 2.0.RC2 app using Ext.navigation.View to pop and push views, linked to a Node.js backend to provide data through a MongoDB database through URLs. The app is based on (Birmingham) Artsfest2011 as I developed a similar app using Sencha Touch 1 and wanted to do the same app in Sencha Touch 2. This is a basic app just for proof fof concept and not intended for production.
 
 
 Routes:

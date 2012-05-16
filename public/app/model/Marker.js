@@ -8,7 +8,8 @@ Ext.define("Poi.model.Marker", {
 	 	 {name: "lat", type: "string"},
 	 	 {name: "icon", type: "string"},
 	 	 {name: "description", type: "string"}
-		]	
+		],
+       		 hasMany: 'Poi.model.Poi' 
 
 	}
 });

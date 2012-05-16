@@ -5,8 +5,24 @@ Ext.define('Poi.view.List', {
     config: {
         title: 'List Title',
         itemTpl: '{title}',
+
         store: 'poiStore',
-        onItemDisclosure: true
+  grouped: true,
+	indexBar: true,
+        onItemDisclosure: true,
+	  items: [
+        {
+            xtype: 'fieldset',
+            docked: 'top',
+            items: [
+                {
+                    xtype: 'searchfield',
+                    label: 'Find',
+                    name: 'query'
+                }
+            ]
+        }
+    ]
     }
 });
 

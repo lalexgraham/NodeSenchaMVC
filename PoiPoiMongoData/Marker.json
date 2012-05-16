@@ -1,0 +1,4 @@
+{ "MarkerID": 78,    "title": "Birmingham Conservatoire",    "long":"-1.905345",    "lat": "52.479278",    "icon": "artsfest.png", "description": "Home to classical music"}
+{ "MarkerID": 37,  "title": "Birmingham Museum and Art Gallery","long": "-1.903714","lat": "52.480173","icon": "artsfest.png","description": "The Citys Art Gallery, the home of the PRB collection amongst other fine art works."}
+{"MarkerID": 89,"title": "Bodega Bar and Cantina", "long": "-1.900495","lat": "52.479677","icon": "artsfest.png","description": "Brazillian restaurant"}
+{"MarkerID": 106 ,"title": "Cafe Blend","long": "-1.902899","lat": "52.477461","icon": "artsfest.png","description": "Cafe Blend"}

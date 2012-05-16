@@ -3,9 +3,12 @@ Ext.define('Poi.store.Pois', {
 	config: {
 		storeId: 'poiStore',
 		model: "Poi.model.Poi",
+		  grouper : function(record) {
+            return record.get('title')[0];
+        },
 		proxy: {
         		type: 'ajax',
-        		url: '/pois/78',
+        		url: '/pois',
 			reader: {
 			    type: 'json',
 			    rootProperty: 'data',

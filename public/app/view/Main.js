@@ -5,7 +5,8 @@ Ext.define('Poi.view.Main', {
 		'Poi.view.Info',
 		'Poi.view.Map',
 		'Poi.view.List',
-		'Poi.view.Detail'
+		'Poi.view.Detail',
+		'Poi.view.MapOneMarker'
 	],
 	config: {
 		items: [{
@@ -15,11 +16,23 @@ Ext.define('Poi.view.Main', {
 		    items: [
 			{
 			    xtype: 'button',
-			    text: 'info',
+			    text: 'Info',
 			    align: 'right',
-				go:'infoCard'
+				go:'infoCard',
+				cardTitle:'Info'
+			},
+			{
+			    xtype: 'button',
+				id:'listOfEvents',
+			    text: 'List of Events',
+			    align: 'left',
+				go:'listCard',
+				cardTitle:'List Of Events'
+				
 			}
-		    ]
+
+		    ]//,
+		//	 docked: 'bottom'
 		}
 
 	}

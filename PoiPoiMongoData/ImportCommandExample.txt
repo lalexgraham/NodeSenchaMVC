@@ -1,0 +1,1 @@
+alex@ubuntu:~$ mongoimport -db PoiPoi -c markers PoiPoiMongoData/Marker.json

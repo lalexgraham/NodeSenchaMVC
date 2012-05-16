@@ -7,6 +7,7 @@ Ext.application({
 	models:['Poi','Marker'],
 
 	selectedMarker: [],
+
 	setSelectedMarker: function(id,title) {
 		this.selectedMarker['id'] = id;
 		this.selectedMarker['title'] = title;

@@ -68,11 +68,24 @@ app.get('/markers', function (req, res) {
 
 });
 
+app.get('/marker/:markerid', function (req, res) {
+    markerModel.find({MarkerID: +req.params.markerid}, function (err, markers) {
+        res.contentType('json');
+        res.json({
+            success: true,
+          data: markers
+
+        });
+    });
+
+});
+
+
 //example url 
 //http://localhost:5000/pois/1234
 
 app.get('/pois/:markerid', function(req, res) {
-console.log('markerid param : ' + req.params.markerid);
+//console.log('markerid param : ' + req.params.markerid);
  poiModel.find({MarkerID: +req.params.markerid}, function (err,pois) {
 		res.contentType('json');
 		res.json({
@@ -81,6 +94,35 @@ console.log('markerid param : ' + req.params.markerid);
 
 		});
  });
+});
+
+
+app.get('/pois', function(req, res) {
+ poiModel.find({}, function (err,pois) {
+		res.contentType('json');
+		res.json({
+		    success: true,
+		  data: pois
+
+		});
+ });
+});
+
+app.get('/poi/insert',function() {
+	var poi = new poiModel();
+	poi.title ='New Poi!';
+	poi.image ='';
+	poi.description ='A description about the Poi';
+	poi.MarkerID = 78;
+	poi.save(function(err, poi_Saved){
+		if (err){
+			throw err;
+			console.log(err);
+		}else{
+
+			console.log('Poi is saved');
+		}	
+	});
 });
 
 

@@ -6,7 +6,8 @@ Ext.define("Poi.model.Poi", {
 	       	 {name: "title", type: "string"},
 	 	 {name: "image", type: "string"},
 	 	 {name: "description", type: "string"}
-		]	
+		],
+		 belongsTo: 'Poi.model.Marker'	
 
 	}
 });
